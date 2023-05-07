@@ -1,5 +1,5 @@
 # enet-socks5
-ENet SOCKS5 support (single header file)
+ENet with SOCKS5 support
 
 not tested on windows yet but working well on linux devices.
 
