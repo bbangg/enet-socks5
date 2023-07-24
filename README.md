@@ -1,12 +1,10 @@
-# enet-socks5
-ENet with SOCKS5 support
+## ENet-SOCKS5
 
-not tested on windows yet but working well on linux devices.
+ENet-SOCKS5 is a library that extends the functionality of ENet by adding support for SOCKS5 proxies. It allows you to create and manage network connections over SOCKS5 proxies, enabling secure and efficient communication between your application and remote servers. While it has been tested on Linux devices, Windows compatibility has not been verified yet.
 
-example (just a pseudo code, go implement it in your codebase)
+**Notice:** Please ensure that the provided proxy supports the UDP protocol!
 
 ```cpp
-
 struct ProxyInfo
 {
   std::string ip;
@@ -69,6 +67,4 @@ void ENetClient::disconnect() noexcept
         host = nullptr;
     }
 }
-
-
 ```
