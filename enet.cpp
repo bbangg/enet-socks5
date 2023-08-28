@@ -1,5 +1,5 @@
 #define ENET_IMPLEMENTATION
-#include "enet.h"
+#include "./include/enet/enet.h"
 
 #ifdef __cplusplus
 extern "C"

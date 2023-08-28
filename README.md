@@ -4,6 +4,14 @@ ENet-SOCKS5 is a library that extends the functionality of ENet by adding suppor
 
 **Notice:** Please ensure that the provided proxy supports the UDP protocol!
 
+### Build
+
+```
+cmake . && make
+```
+
+### Example
+
 ```cpp
 struct ProxyInfo
 {
@@ -19,15 +27,12 @@ ENetPeer *peer = nullptr;
 bool ENetClient::connect(const std::string &server_ip, uint16_t server_port) noexcept
 {
     if (host != nullptr)
-    {
         disconnect();
-    }
+
     host = enet_host_create(0, 1, 2, 0, 0);
     host->usingNewPacket = true;
     if (host == nullptr)
-    {
         return false;
-    }
 
     // if port defined
     if (proxy_info.port > 0)
